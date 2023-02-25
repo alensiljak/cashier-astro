@@ -1,13 +1,35 @@
 ---
 import Layout from '../layouts/LayoutDrawer.astro';
-import '../styles.css'
+// import '../styles.css'
 
 let a = 3;
 ---
 <Layout title="Drawer Demo">
 
-<p class="m-4">This is a drawer demo.</p>
+<p class="m-4 center">This is a drawer demo.</p>
 
-<button class="btn btn-primary">Button</button>
+<div>
+    a = {a}
+</div>
+
+<button id="btn1" class="btn btn-primary">Button</button>
 
 </Layout>
+
+<script>
+    import hammer from 'hammerjs';
+    // var hammertime = hammer('body', {});
+
+    // var hammertime = new Hammer(myElement, myOptions);
+// hammertime.on('pan', function(ev: any) {
+// 	console.log(ev);
+// });
+
+console.log('are we alive?');
+
+const btn = document.querySelector('#btn1');
+btn.addEventListener("click", () => {
+    console.log('button clicked')
+});
+
+</script>
