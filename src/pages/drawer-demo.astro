@@ -16,33 +16,53 @@ let a = 3;
 </Layout>
 
 <script>
-  import 'hammerjs';
+  // import * as Hammer from 'hammerjs';
+  // import 'hammerjs';
+  import ZingTouch from 'zingtouch';
 
   window.onload = (event) => {
     console.log('page is fully loaded');
 
     var body = document.getElementsByName('body');
-    let myElement = document.getElementById('label');
-    var hammertime = new Hammer(document.body, {});
-    hammertime.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL });
+    // let myElement = document.getElementById('label');
+
+    // ZingTouch demo
+    var zt = new ZingTouch.Region(document.body);
+    //var myElement = document.getElementById('my-div');
+    var myElement = document.body;
+
+    zt.bind(
+      myElement,
+      'swipe',
+      function (e: any) {
+        //Actions here
+        console.log('swipe', e)
+      },
+      false
+    );
+
+    /*
+    // var hammertime = new Hammer(document.body, {});
+    // hammertime.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL });
 
     hammertime.on('swipeleft', (e: any) => {
       // console.log('swiping left!')
       // close drawer
-      let el: HTMLInputElement = document.getElementById('my-drawer');
+      let el = document.getElementById('my-drawer') as HTMLInputElement;
       el.checked = false;
     });
     hammertime.on('swiperight', (e: any) => {
       // console.log('swiping right!')
       // open drawer
-      let el: HTMLInputElement = document.getElementById('my-drawer');
+      let el = document.getElementById('my-drawer') as HTMLInputElement;
       el.checked = true;
     });
+    */
   };
 
   // console.log('are we alive?');
 
-  const btn = document.querySelector('#btn1');
+  const btn = document.querySelector('#btn1') as Element;
   btn.addEventListener('click', () => {
     console.log('button clicked');
   });
