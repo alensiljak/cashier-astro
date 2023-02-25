@@ -1,6 +1,3 @@
-# cashier-astro
-Cashier implemented with Astro
-
 # Astro Starter Kit: Basics
 
 ```
