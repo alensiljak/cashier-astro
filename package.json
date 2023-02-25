@@ -1,5 +1,5 @@
 {
-	"name": "project",
+	"name": "cashier",
 	"type": "module",
 	"version": "0.0.1",
 	"scripts": {
@@ -11,5 +11,8 @@
 	},
 	"dependencies": {
 		"astro": "^2.0.15"
+	},
+	"devDependencies": {
+		"@vite-pwa/astro": "^0.0.4"
 	}
 }
