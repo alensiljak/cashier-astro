@@ -15,8 +15,9 @@ let a = 3;
   <button id="btn1" class="btn btn-primary">Button</button>
 </Layout>
 
-<script src="https://hammerjs.github.io/dist/hammer.js"></script>
 <script>
+  import 'hammerjs';
+
   window.onload = (event) => {
     console.log('page is fully loaded');
 
@@ -38,13 +39,8 @@ let a = 3;
       el.checked = true;
     });
   };
-  // import hammer from 'hammerjs';
-  // var hammertime = new Hammer(myElement, myOptions);
-  // hammertime.on('pan', function(ev: any) {
-  // 	console.log(ev);
-  // });
 
-  console.log('are we alive?');
+  // console.log('are we alive?');
 
   const btn = document.querySelector('#btn1');
   btn.addEventListener('click', () => {
