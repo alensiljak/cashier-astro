@@ -16,9 +16,8 @@ let a = 3;
 </Layout>
 
 <script>
-  // import * as Hammer from 'hammerjs';
+  import * as Hammer from 'hammerjs';
   // import 'hammerjs';
-  import ZingTouch from 'zingtouch';
 
   window.onload = (event) => {
     console.log('page is fully loaded');
@@ -26,23 +25,7 @@ let a = 3;
     var body = document.getElementsByName('body');
     // let myElement = document.getElementById('label');
 
-    // ZingTouch demo
-    var zt = new ZingTouch.Region(document.body);
-    //var myElement = document.getElementById('my-div');
-    var myElement = document.body;
-
-    zt.bind(
-      myElement,
-      'swipe',
-      function (e: any) {
-        //Actions here
-        console.log('swipe', e)
-      },
-      false
-    );
-
-    /*
-    // var hammertime = new Hammer(document.body, {});
+    var hammertime = new Hammer(document.body, {});
     // hammertime.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL });
 
     hammertime.on('swipeleft', (e: any) => {
@@ -57,7 +40,6 @@ let a = 3;
       let el = document.getElementById('my-drawer') as HTMLInputElement;
       el.checked = true;
     });
-    */
   };
 
   // console.log('are we alive?');
